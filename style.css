@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "Lab Grotesque";
+  src: url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.eot");
+  src: url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5f4cf05e3d14b070a09eff0243790d58.woff")
+      format("woff");
+}
+
+:root {
+  --Black: #000000;
+  --Dune: #333333;
+  --Strong-Blue: #0000ee;
+  --Boulder: #767676;
+  --Seashell: #eef0f2;
+  --white: #ffffff;
+  --Aqua-Green: #04ddb2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lab Grotesque";
+  font-size: 16px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--Boulder);
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+.nav_for_Pc {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.download_Btn {
+  padding: 1rem 2rem;
+  background-color: var(--Aqua-Green);
+  border: none;
+  border-radius: 25px;
+  color: var(--Seashell);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navBlock {
+  display: none;
+}
+.header {
+  width: 100%;
+  background-color: rgba(238, 240, 242, 1);
+}
+.header i {
+  display: none;
+}
+
+.heading-section {
+  text-align: center;
+  padding: 3rem;
+}
+.heading-section h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: var(--Dune);
+}
+.heading-section span {
+  color: var(--Aqua-Green);
+}
+.heading-section p {
+  font-size: 1.7rem;
+  color: var(--Dune);
+}
+.videoSection > .video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.video > .video {
+  border-radius: 10px;
+  width: 90%;
+  min-width: 350px;
+  height: 50vw;
+  transition: all 0.4s ease;
+}
+.video > .video:hover {
+  box-shadow: 0 100px 140px -50px rgba(0, 0, 0, 0.25),
+    0 0 20px 0 rgba(0, 0, 0, 0.03);
+  transform: scale3d(1.01, 1.01, 1.01);
+}
+
+.videoSection .textDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.videoSection h1 {
+  color: var(--Dune);
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1.04;
+  font-weight: bolder;
+}
+.footer {
+  padding: 6rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer h1 {
+  color: var(--Dune);
+}
+.footer .footerSection-5 {
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 2rem;
+}
+.footer i {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+.cercle {
+  background-color: var(--Aqua-Green);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .nav_for_Pc {
+    display: none;
+  }
+
+  .navBlock {
+    display: block;
+    position: relative;
+  }
+  .header i {
+    display: block;
+    background-color: var(--Boulder);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+  }
+  .navBlock {
+    position: absolute;
+    top: -460px;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: opacity 0.1s, top 0.3s ease;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgba(238, 240, 242);
+  }
+  .navBlock.active {
+    top: 80px;
+    opacity: 1;
+  }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .heading-section h1 {
+    font-size: 3.8rem;
+  }
+  .heading-section p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .videoSection h1 {
+    font-size: 3.7rem;
+  }
+
+  .videoSection .download_Btn {
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 0.7rem 1.3rem;
+    width: 30%;
+  }
+  .footer .footerSection-5 {
+    justify-content: center;
+    align-items: center;
+  }
+}
