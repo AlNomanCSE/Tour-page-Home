@@ -224,7 +224,7 @@ img {
 
   .videoSection .download_Btn {
     font-size: 1rem;
-    font-weight: lighter;
+    font-weight: bold;
     padding: 0.7rem 1.3rem;
     width: 30%;
   }
